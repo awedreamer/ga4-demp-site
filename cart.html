@@ -7,7 +7,7 @@
 <body>
 
 <nav>
-  <div>Myntra Demo</div>
+  <div class="logo">MYNTRA</div>
   <div>
     <a href="index.html">Home</a>
   </div>
@@ -15,7 +15,7 @@
 
 <div class="container">
   <h1>Your Cart</h1>
-  <div id="cartItems"></div>
+  <div id="cart"></div>
 </div>
 
 <script>
@@ -23,12 +23,13 @@ const cart = JSON.parse(localStorage.getItem("cart")) || [];
 let html = "";
 
 cart.forEach(item => {
-  html += `<p>${item.name} – ₹${item.price}</p>`;
+  html += `<div class="cart-item">${item.name} – ₹${item.price}</div>`;
 });
 
-document.getElementById("cartItems").innerHTML =
-  html || "Cart is empty";
+document.getElementById("cart").innerHTML =
+  html || "Your cart is empty";
 </script>
 
 </body>
 </html>
+
