@@ -15,13 +15,13 @@
 </nav>
 
 <div class="container">
-  <h1>Shop by Category</h1>
+  <h1>Shop by Category</h1><br>
   <button class="category-btn" onclick="goToProducts('Men')">Men</button>
   <button class="category-btn" onclick="goToProducts('Women')">Women</button>
 </div>
 
 <script>
-function goToProducts(category){
+function goToProducts(category) {
   localStorage.setItem("category", category);
   window.location.href = "products.html";
 }
@@ -29,4 +29,3 @@ function goToProducts(category){
 
 </body>
 </html>
-
