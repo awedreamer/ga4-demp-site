@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div>Myntra Demo</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="cart.html">Cart</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1 id="categoryTitle"></h1>
+
+  <div>
+    <div onclick="viewProduct(1,'T-Shirt',799)">T-Shirt – ₹799</div>
+    <div onclick="viewProduct(2,'Jeans',1999)">Jeans – ₹1999</div>
+  </div>
+</div>
+
+<script>
+document.getElementById("categoryTitle").innerText =
+  localStorage.getItem("category") + " Products";
+
+function viewProduct(id,name,price){
+  localStorage.setItem("product", JSON.stringify({id,name,price}));
+  window.location.href = "product.html";
+}
+</script>
+
+</body>
+</html>
