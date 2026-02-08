@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Myntra-like Demo</title>
+  <title>Myntra Demo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-  <div>Myntra Demo</div>
+  <div class="logo">MYNTRA</div>
   <div>
     <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
     <a href="cart.html">Cart</a>
   </div>
 </nav>
 
 <div class="container">
   <h1>Shop by Category</h1>
-  <button onclick="goToProducts('Men')">Men</button>
-  <button onclick="goToProducts('Women')">Women</button>
+  <button class="category-btn" onclick="goToProducts('Men')">Men</button>
+  <button class="category-btn" onclick="goToProducts('Women')">Women</button>
 </div>
 
 <script>
