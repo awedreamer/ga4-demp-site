@@ -16,6 +16,15 @@
 <div class="container">
   <h1>Your Cart</h1>
   <div id="cart"></div>
+
+  <h2 style="margin-top:40px;">Customer Details</h2>
+
+  <form class="checkout-form" onsubmit="submitForm(event)">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="City" required>
+    <button class="add-btn" type="submit">Place Order</button>
+  </form>
 </div>
 
 <script>
@@ -28,8 +37,13 @@ cart.forEach(item => {
 
 document.getElementById("cart").innerHTML =
   html || "Your cart is empty";
+
+function submitForm(e) {
+  e.preventDefault();
+  localStorage.setItem("order", JSON.stringify(cart));
+  window.location.href = "thank-you.html";
+}
 </script>
 
 </body>
 </html>
-
