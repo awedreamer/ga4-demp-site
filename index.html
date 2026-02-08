@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>GA4 Demo</title>
+  <meta charset="UTF-8">
+  <title>GA4 Interactive Demo</title>
+
+  <!-- GA4 TAG (keep yours here) -->
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>GA4 Demo Website</h1>
-  <p>If you see this, hosting works 🎉</p>
+
+<header class="hero">
+  <h1>GA4 Interactive Demo</h1>
+  <p>Practice real Google Analytics 4 events</p>
+
+  <div class="buttons">
+    <button onclick="trackEvent('hero_primary_click')">Get Started</button>
+    <button class="secondary" onclick="trackEvent('hero_secondary_click')">Learn More</button>
+    <button class="ghost" onclick="trackEvent('hero_ghost_click')">Explore</button>
+  </div>
+</header>
+
+<section class="features">
+  <h2>Why This Demo?</h2>
+
+  <div class="cards">
+    <div class="card" onclick="trackEvent('feature_click_analytics')">
+      <h3>Analytics</h3>
+      <p>Track real GA4 events</p>
+    </div>
+
+    <div class="card" onclick="trackEvent('feature_click_events')">
+      <h3>Events</h3>
+      <p>Buttons, scrolls, forms</p>
+    </div>
+
+    <div class="card" onclick="trackEvent('feature_click_learning')">
+      <h3>Learning</h3>
+      <p>Hands-on GA4 practice</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contact Form</h2>
+
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<footer>
+  <p>GA4 Demo • Built with GitHub Pages</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
