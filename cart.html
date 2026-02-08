@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div>Myntra Demo</div>
+  <div>
+    <a href="index.html">Home</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Your Cart</h1>
+  <div id="cartItems"></div>
+</div>
+
+<script>
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+let html = "";
+
+cart.forEach(item => {
+  html += `<p>${item.name} – ₹${item.price}</p>`;
+});
+
+document.getElementById("cartItems").innerHTML =
+  html || "Cart is empty";
+</script>
+
+</body>
+</html>
