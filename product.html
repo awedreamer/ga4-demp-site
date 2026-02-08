@@ -7,24 +7,26 @@
 <body>
 
 <nav>
-  <div>Myntra Demo</div>
+  <div class="logo">MYNTRA</div>
   <div>
     <a href="products.html">Back</a>
     <a href="cart.html">Cart</a>
   </div>
 </nav>
 
-<div class="container">
-  <h1 id="name"></h1>
-  <p id="price"></p>
-  <button onclick="addToCart()">Add to Cart</button>
+<div class="container product-detail">
+  <div class="image"></div>
+  <div>
+    <h1 id="name"></h1>
+    <h2>₹ <span id="price"></span></h2>
+    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+  </div>
 </div>
 
 <script>
 const product = JSON.parse(localStorage.getItem("product"));
-
 document.getElementById("name").innerText = product.name;
-document.getElementById("price").innerText = "₹" + product.price;
+document.getElementById("price").innerText = product.price;
 
 function addToCart(){
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -36,3 +38,4 @@ function addToCart(){
 
 </body>
 </html>
+
