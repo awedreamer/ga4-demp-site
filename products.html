@@ -7,7 +7,7 @@
 <body>
 
 <nav>
-  <div>Myntra Demo</div>
+  <div class="logo">MYNTRA</div>
   <div>
     <a href="index.html">Home</a>
     <a href="cart.html">Cart</a>
@@ -15,16 +15,25 @@
 </nav>
 
 <div class="container">
-  <h1 id="categoryTitle"></h1>
+  <h1 id="title"></h1>
 
-  <div>
-    <div onclick="viewProduct(1,'T-Shirt',799)">T-Shirt – ₹799</div>
-    <div onclick="viewProduct(2,'Jeans',1999)">Jeans – ₹1999</div>
+  <div class="products">
+    <div class="product-card" onclick="viewProduct(1,'T-Shirt',799)">
+      <div class="product-img"></div>
+      <div class="product-name">T-Shirt</div>
+      <div class="price">₹ <span>799</span></div>
+    </div>
+
+    <div class="product-card" onclick="viewProduct(2,'Jeans',1999)">
+      <div class="product-img"></div>
+      <div class="product-name">Jeans</div>
+      <div class="price">₹ <span>1999</span></div>
+    </div>
   </div>
 </div>
 
 <script>
-document.getElementById("categoryTitle").innerText =
+document.getElementById("title").innerText =
   localStorage.getItem("category") + " Products";
 
 function viewProduct(id,name,price){
